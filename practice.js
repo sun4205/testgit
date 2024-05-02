@@ -118,3 +118,71 @@ return(width>height);
  }
 
  console.log(countTruthy(array));
+
+ const movie = {
+  title : 'a',
+  releaseYear : 2018,
+  rating: 4.5,
+  director: 'b'
+
+
+ };
+
+ function showProperties(obj){
+  for(let key in obj){
+    console.log(key)
+  }
+ }
+
+ showProperties(movie);
+
+ function sum(limit){
+
+ }
+
+ console.log(sum(10));
+
+ function sum(limit){
+  let sum=0;
+
+  for(let i =0; i<=limit; i++){
+    if(i % 3 ===0 ||i % 5 ===0){
+      sum += i;
+    }    
+  }
+  return sum;
+ }
+
+ console.log(sum(10));
+
+ const marks = [80, 80, 50];
+
+ function calculateGrade(marks){
+  const averagy = calculateAvarage(marks)
+  if(averagy<60) return 'F';
+  if(averagy<70) return 'D';
+  if(averagy<80) return 'C';
+  if(averagy<90) return 'B';
+  return 'A'
+ }
+
+ function calculateAvarage(array){
+  let sum = 0;
+  for(let value of array)
+    sum += value;
+  return sum/ array.length
+ }
+
+ console.log(calculateGrade(marks));
+
+ function showStars(rows){
+  for(let row=1; row<=rows; row++){
+    let pattern = '';
+    for(let i=0; i<row; i++)
+    pattern += '*';
+  console.log(pattern)
+  }
+
+ }
+
+ showStars(5);
