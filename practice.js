@@ -218,3 +218,55 @@
  }
 
  showPrimes(20);
+
+ const circle = {
+  radius : 1,
+  draw(){
+    console.log('draw');
+  }
+ };
+
+ for(let key in circle)
+ console.log(key, circle[key]);
+
+ for(let key of Object.keys(circle))
+ console.log(key);
+
+ for(let entry of Object.entries(circle))
+ console.log(entry);
+
+ if('color' in circle) console.log('yes');
+
+ let address = {
+  street : 'a',
+  zipcode : 'b',
+  city : 'c'
+ };
+
+ function showAddress(address){
+  for(let key in address){
+    console.log(key, address[key])
+  }
+ }
+
+ showAddress(address);
+
+ //factory function
+
+ function createAddress(street, city, zipcode){
+  return {
+    street,
+    city,
+    zipcode
+  };
+ }
+
+ //contructor function
+
+ function Address(street, city, zipcode){
+  this.street = street;
+  this.city = city;
+  this.zipcode = zipcode;
+ }
+
+ let makeAddress = new Address('a','b','c');
