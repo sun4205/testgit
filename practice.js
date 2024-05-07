@@ -291,8 +291,38 @@
 
  const examNum = [1, 2, 3, 4];
 
- const last = numbers.pop();
+ const last = examNum.pop();
  console.log(examNum);
  console.log(last);
+ const first = examNum.shift()
+ console.log(first);
 
- 
+ examNum.splice(2,1);
+ console.log(examNum)
+
+ const first1 = [1,2,3];
+ const second = [4,5,6];
+
+ const combined = first1.concat(second);
+ console.log(combined)
+
+ for(let exam of examNum)
+ console.log(exam);
+
+ examNum.forEach(exam => console.log(exam));
+
+ const filtered = numbers.filter(n => n>=0);
+
+ const items = filtered.map(n=>{
+  return {value:n};
+ });
+
+ console.log(items);
+
+ const result1 = numbers.reduce((accumulator,currentVaule)=>{
+  return accumulator + currentVaule;
+ },0)
+
+ console.log(result1);
+
+
