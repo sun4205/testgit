@@ -334,4 +334,38 @@
 
  console.log(sum([1,2,3,4]));
 
+ const circle1 = {
+  radius : 1,
+  get area(){
+    return Math.PI * this.radius * this.radius;
+  }
+ };
+
+ console.log(circle1.area);
+
+ 
+
+ try{
+  const numb = [1,2,3,4];
+
+ const count = countOccurrences(true,1);
+ console.log(count);
+ }
+
+ catch (e){
+  console.log(e.message);
+ }
+
+ function countOccurrences(array, searchElement){
+  if(!Array.isArray(array))
+  throw new Error('Invalid array');
+
+  return array.reduce((accumulator,current)=>{
+    const occurence = (current === searchElement) ? 1: 0;
+    return accumulator + occurence;
+  }, 0);
+ }
+
+
+
 
