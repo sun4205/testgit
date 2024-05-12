@@ -27,14 +27,37 @@ console.log(interest(10000, undefined,5));
 const person = {
     firstName:'Mosh',
     lastName:'Hamedani',
-    get fullName(){
-        return `${person.firstName} ${person.lastName}`},
-        set fullName(value){
-            const parts = value.split(' ');
-            this.firstName = parts[0];
-            this.lastName = parts[1];
-        }
+    set fullName(value){
+        if(typeof value !== 'string')
+        throw new Error('value is not a string');
+
+        const parts = value.split('');
+        if(parts.length !==2)
+        throw new Error('Enter a first and last name');
+        this.firstName = parts[0];
+        this.lastName = parts[1];
+    }
+    
     };
 
-    person.fullName= 'john Smith';
+
+    try{
+        person.fullName = '';
+    }
+    catch (e){
+        alert(e);
+    }
     console.log(person)
+
+    const color = 'red';
+
+    function start(){
+        const message = 'hi';
+        console.log(color);
+    }
+
+    function stop(){
+        const message = 'bye';
+    }
+
+    start();
