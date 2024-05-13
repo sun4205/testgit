@@ -61,3 +61,32 @@ const person = {
     }
 
     start();
+
+    let person1 = {
+        name : 'Mosh',
+        age : 30
+    };
+
+    person1.name = 'John';
+
+    person['name'] = 'Mary';
+
+    console.log(person.name);
+
+    let selectedColors = ['red','blue'];
+    selectedColors[2] = 'green';
+
+    console.log(selectedColors.length);
+
+    function greet(name){
+        console.log('Hello' + name);
+    }
+
+    greet('John');
+
+    function square(number){
+        return number * number;
+    }
+
+    
+    console.log(square(2));
