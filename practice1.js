@@ -90,3 +90,84 @@ const person = {
 
     
     console.log(square(2));
+
+    let a = 'red';
+    let b = 'blue';
+
+    let c=a;
+    a = b;
+    b=c;
+
+    console.log(a);
+    console.log(b);
+
+    let hour = 10;
+
+    if(hour >=  6 && hour <12){
+        console.log('Good Morniing')
+    }
+    else if (hour >=12 && hour <18){
+        console.log('Good Afternoon');
+    }
+    else {
+        console.log('Good night');
+    }
+
+    for(let i=0; i<5; i++){
+        console.log('hello world');
+    }
+
+    for(let i =0; i<=5; i++){
+        if(i%2 !==0) console.log(i);
+    }
+
+    let number = max(3,5);
+
+    function max(num1,num2){
+        return (num1>num2) ? num1 : num2;
+    }
+
+    console.log(isLandescape(300,400));
+    function isLandescape(width, heigh){
+        return(width>heigh);
+    }
+
+    const output = fizzBuzz(15);
+    console.log(output);
+
+    function fizzBuzz(input){
+         if((input % 3 ===0) && (input % 5 ===0))
+        return fizzBuzz;
+    
+        if(input !== 'number')
+        return 'Nan';
+
+        if(input % 3 ===0 )
+        return fizz;
+
+        if(input % 5 ===0 )
+        return Buzz;      
+
+        
+        return input;
+    }
+
+    checkSpeed(180)
+
+    function checkSpeed(speed){
+        const speedLimit = 70;
+        const kmPerPoint = 5;
+
+        if(speed<=speedLimit)
+        console.log('ok');
+        else {
+           let points = Math.floor((speed - speedLimit) / kmPerPoint);
+           if(points >=12)
+                console.log('License suspended');
+            else
+            console.log('points', points);
+        }
+        
+
+
+    }
