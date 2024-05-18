@@ -264,7 +264,7 @@ const person = {
 
     showPrimes(20);
 
-    
+
     function showPrimes(limit){
         for(let number = 2; number<=limit; number++)
             if(isPrime(number)) console.log(number);
@@ -277,3 +277,25 @@ const person = {
 
                  return true;
     }
+
+    function createCircle(radius){
+        return{
+            radius,
+            draw() {
+                console.log('draw');
+            }
+    };
+    }
+
+    function Circle(radius){
+        this.radius = radius;
+        this.draw = function(){
+            console.log('draw');
+        }
+        return this;
+    }
+
+    const circle = new Circle(1);
+    const x={};
+
+    
