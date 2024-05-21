@@ -298,4 +298,49 @@ const person = {
     const circle = new Circle(1);
     const x={};
 
+    let person = {
+        'first name': 'Max',
+        age : 30,
+        hobbies: ['Sports','Cooking'],
+        greet : function(){
+            alert('Hi there')
+        }
+    }
+
+    person.age = 31;
+    person.isAdim = true;
+    delete person.age;
+
+    console.log(person);
+
+    const addMovieBtn = document.getElementById('add-movie-btn');
+    const searchBtn = document.getElementById('search-btn');
+
+    const movies = [];
+
+    const addMovieHandler = () => {
+        const title = document.getElementById('title').value;
+        const extraName = document.getElementById('extra-value').value;
+        const extraValue = document.getElementById('extra-value').value;
+
+        if(
+            title.trim()==='' ||
+            extraName.trim()===''||
+            extraValue.trim()===''
+        ){
+            return;
+        }
     
+
+    const newMovie = {
+        info : {
+            title,
+            [extraName] : extraValue
+         },
+         id:Math.random()
+        };
+        movies.push(newMovie);
+    };
+
+    addMovieBtn.addEventListener('click',addMovieHandler);
+
